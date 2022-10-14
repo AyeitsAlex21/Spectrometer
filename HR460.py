@@ -19,7 +19,7 @@ from Spectrometer import Spectrometer
 import numpy as np
 import matplotlib
 matplotlib.use('TkAgg')
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
 
 
@@ -262,7 +262,7 @@ class Scanning(tk.Frame):
 
         #Create canvas for the plot and add it to the window
         self.pltcanvas = FigureCanvasTkAgg(self.f,self)
-        self.pltcanvas.show()
+        self.pltcanvas.draw()
         self.pltcanvas.get_tk_widget().place(relx=0.72,rely=0.5,anchor=tk.CENTER)
 
         #Button for returning to main menu
